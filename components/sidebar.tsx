@@ -1,6 +1,14 @@
 "use client";
 
-import { Bell, CircleEllipsis, House, Mail, Search, User } from "lucide-react";
+import {
+  Bell,
+  CircleEllipsis,
+  House,
+  Mail,
+  Pen,
+  Search,
+  User,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "./libs/utils";
@@ -43,12 +51,12 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="p-3">
-      <div>
+    <aside className="p-3 max-w-[280px]">
+      <div className="flex flex-col items-center xl:items-start">
         <Logo />
       </div>
       <nav>
-        <ul className="flex flex-col gap-y-2">
+        <ul className="flex flex-col items-center xl:items-start gap-y-2">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -67,9 +75,10 @@ export const Sidebar = () => {
           ))}
           <Link
             href="/compose/post"
-            className="bg-sky-500 py-3 px-6 rounded-full text-center font-bold hover:bg-sky-500/90 transition-colors duration-200"
+            className="bg-sky-500 w-fit xl:w-full p-3 rounded-full text-center font-bold hover:bg-sky-500/90 transition-colors duration-200"
           >
-            Post
+            <span className="hidden xl:inline-block">Post</span>
+            <Pen className="size-5 xl:hidden" />
           </Link>
         </ul>
       </nav>

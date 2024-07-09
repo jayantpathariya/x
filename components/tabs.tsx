@@ -1,12 +1,27 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
+import Image from "next/image";
 import { FollowingTab } from "./following-tab";
 import { ForYouTab } from "./for-you-tab";
+import { Logo } from "./logo";
 
 export const Tabs = () => {
   return (
     <TabsPrimitive.Root defaultValue="you">
-      <TabsPrimitive.List className="bg-black w-full border border-neutral-700 sticky top-0 z-10">
-        <h1 className="p-3 text-xl font-bold md:hidden">Home</h1>
+      <TabsPrimitive.List className="bg-black w-full border border-neutral-700 md:sticky top-0 z-10">
+        <div className="md:hidden flex items-center px-3 relative">
+          <div className="absolute">
+            <Image
+              src="/profile-picture.png"
+              alt="Profile picture"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+          </div>
+          <div className="text-clip flex grow justify-center">
+            <Logo />
+          </div>
+        </div>
         <div className="grid grid-cols-2">
           <TabsPrimitive.Trigger
             value="you"

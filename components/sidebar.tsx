@@ -1,57 +1,18 @@
 "use client";
 
 import { cn } from "@/libs/utils";
-import {
-  Bell,
-  CircleEllipsis,
-  House,
-  Mail,
-  Pen,
-  Search,
-  User,
-} from "lucide-react";
+
+import { links } from "@/libs/constants";
+import { Pen } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
-
-const links = [
-  {
-    href: "/",
-    icon: House,
-    label: "Home",
-  },
-  {
-    href: "/explore",
-    icon: Search,
-    label: "Explore",
-  },
-  {
-    href: "/notifications",
-    icon: Bell,
-    label: "Notifications",
-  },
-  {
-    href: "/messages",
-    icon: Mail,
-    label: "Messages",
-  },
-  {
-    href: "/profile",
-    icon: User,
-    label: "Profile",
-  },
-  {
-    href: "/more",
-    icon: CircleEllipsis,
-    label: "More",
-  },
-];
 
 export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="bg-black p-2 fixed top-0">
+    <aside className="bg-black p-2 fixed top-0 hidden md:block">
       <div className="flex flex-col items-end xl:items-start">
         <Logo />
       </div>

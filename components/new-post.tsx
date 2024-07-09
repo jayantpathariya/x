@@ -12,7 +12,7 @@ export const NewPost = () => {
   const isFocused = false;
 
   return (
-    <div className="flex gap-x-3 p-4 w-full">
+    <div className="gap-x-3 p-4 w-full hidden md:flex">
       <Image
         src="/profile-picture.png"
         alt="Profile picture"
@@ -40,7 +40,7 @@ export const NewPost = () => {
             </button>
           )}
         </div>
-        <div className="md:mt-4 flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-1">
             <button className="hover:bg-sky-500/20 p-2 rounded-full">
               <ImageIcon className="text-sky-500 size-5" />

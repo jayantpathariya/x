@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/libs/utils";
 import {
   Bell,
   CircleEllipsis,
@@ -11,7 +12,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "./libs/utils";
 import { Logo } from "./logo";
 
 const links = [
@@ -51,12 +51,12 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="p-3 max-w-[280px]">
-      <div className="flex flex-col items-center xl:items-start">
+    <aside className="p-2 w-[280px]">
+      <div className="flex flex-col items-end xl:items-start">
         <Logo />
       </div>
       <nav>
-        <ul className="flex flex-col items-center xl:items-start gap-y-2">
+        <ul className="flex flex-col items-end xl:items-start gap-y-2">
           {links.map((link) => (
             <li key={link.href}>
               <Link

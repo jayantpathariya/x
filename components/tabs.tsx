@@ -1,4 +1,5 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { FollowingTab } from "./following-tab";
 import { ForYouTab } from "./for-you-tab";
 
 export const Tabs = () => {
@@ -23,12 +24,7 @@ export const Tabs = () => {
         </TabsPrimitive.Trigger>
       </TabsPrimitive.List>
       <ForYouTab />
-      <TabsPrimitive.Content
-        value="following"
-        className="border border-neutral-600 bg-black"
-      >
-        <div>Following</div>
-      </TabsPrimitive.Content>
+      <FollowingTab />
     </TabsPrimitive.Root>
   );
 };

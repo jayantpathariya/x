@@ -1,15 +1,13 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { NewPost } from "./new-post";
-import { ShowNewPostBanner } from "./show-new-posts-banner";
 
-export const ForYouTab = () => {
+export const FollowingTab = () => {
   return (
     <TabsPrimitive.Content
-      value="you"
+      value="following"
       className="border border-neutral-600 bg-black"
     >
       <NewPost />
-      <ShowNewPostBanner />
     </TabsPrimitive.Content>
   );
 };

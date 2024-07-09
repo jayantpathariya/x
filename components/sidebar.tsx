@@ -62,11 +62,21 @@ export const Sidebar = () => {
               <Link
                 href={link.href}
                 className={cn(
-                  "flex items-center justify-center xl:justify-start gap-x-4 hover:bg-neutral-800 p-3 xl:p-3 rounded-full transition-colors duration-200 text-neutral-400",
+                  "flex items-center justify-center xl:justify-start gap-x-4 hover:bg-neutral-800 p-3 xl:p-3 rounded-full transition-colors duration-200 text-neutral-400 relative",
                   pathname.includes(link.href) && "text-neutral-100"
                 )}
               >
                 <link.icon className="size-7" />
+                {link.href === "/notifications" && (
+                  <span
+                    className={cn(
+                      link.href === "/notifications" &&
+                        "size-5 bg-sky-500 absolute top-1.5 right-2.5 xl:left-6 xl:top-1.5 rounded-full flex items-center justify-center text-neutral-100"
+                    )}
+                  >
+                    2
+                  </span>
+                )}
                 <span className="font-bold font-lg hidden xl:inline-block">
                   {link.label}
                 </span>

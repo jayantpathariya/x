@@ -51,7 +51,7 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="p-2 w-[280px]">
+    <aside className="bg-black p-2 fixed top-0">
       <div className="flex flex-col items-end xl:items-start">
         <Logo />
       </div>

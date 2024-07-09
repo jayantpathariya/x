@@ -5,7 +5,7 @@ import { TrendingItem } from "./trending-item";
 
 export const TrendingSidebar = () => {
   return (
-    <aside className="p-2 w-[350px] hidden xl:block">
+    <aside className="p-2 min-w-[350px] hidden xl:block sticky z-10 top-0 bg-black h-fit">
       <div className="relative">
         <input
           type="text"

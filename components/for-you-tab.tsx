@@ -1,4 +1,5 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { NewPost } from "./new-post";
 
 export const ForYouTab = () => {
   return (
@@ -6,7 +7,7 @@ export const ForYouTab = () => {
       value="you"
       className="border border-neutral-600 bg-black"
     >
-      <div>For you</div>
+      <NewPost />
     </TabsPrimitive.Content>
   );
 };

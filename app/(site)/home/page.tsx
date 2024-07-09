@@ -1,5 +1,11 @@
+import { Tabs } from "@/components/tabs";
+
 const HomePage = () => {
-  return <div className="bg-neutral-500 w-1/2">HomePage</div>;
+  return (
+    <div className="w-1/2">
+      <Tabs />
+    </div>
+  );
 };
 
 export default HomePage;

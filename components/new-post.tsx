@@ -18,7 +18,7 @@ export const NewPost = () => {
         className="size-12 rounded-full"
       />
       <div className="w-full">
-        <div className="flex flex-col w-full border-b border-neutral-500 pb-2">
+        <div className="flex flex-col w-full border-b border-neutral-700 pb-2">
           <textarea
             name="post"
             id="post"

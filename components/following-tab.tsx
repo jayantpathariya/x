@@ -5,7 +5,7 @@ export const FollowingTab = () => {
   return (
     <TabsPrimitive.Content
       value="following"
-      className="border border-neutral-600 bg-black"
+      className="border border-neutral-700 bg-black"
     >
       <NewPost />
     </TabsPrimitive.Content>

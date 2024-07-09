@@ -5,7 +5,7 @@ import { ForYouTab } from "./for-you-tab";
 export const Tabs = () => {
   return (
     <TabsPrimitive.Root defaultValue="you">
-      <TabsPrimitive.List className="w-full grid grid-cols-2 border border-neutral-600">
+      <TabsPrimitive.List className="w-full grid grid-cols-2 border border-neutral-700">
         <TabsPrimitive.Trigger
           value="you"
           className="p-3 group bg-black hover:bg-black/80 transition-colors duration-200 ease-in-out"

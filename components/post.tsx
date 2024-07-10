@@ -1,6 +1,7 @@
 import { Ellipsis } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { HoverCard } from "./hover-card";
 import { PostActions } from "./post-actions";
 import { Tooltip } from "./tooltip";
 
@@ -20,13 +21,17 @@ export const Post = () => {
       <div>
         <div className="flex w-full justify-between  text-neutral-500">
           <div className="flex items-center gap-x-1 md:gap-x-2">
-            <Link
-              href="/profile"
-              className=" text-neutral-200 font-semibold text-sm md:text-base line-clamp-1 hover:underline"
-            >
-              Ethel Richards
-            </Link>
-            <p className="text-sm">@scottrosa</p>
+            <HoverCard>
+              <Link
+                href="/profile"
+                className=" text-neutral-200 font-semibold text-sm md:text-base line-clamp-1 hover:underline"
+              >
+                Ethel Richards
+              </Link>
+            </HoverCard>
+            <HoverCard>
+              <p className="text-sm">@scottrosa</p>
+            </HoverCard>
             <span>•</span>
             <span className="text-sm">21h</span>
           </div>

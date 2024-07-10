@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HoverCard } from "./hover-card";
 
 export const FollowItem = () => {
   return (
@@ -13,12 +14,14 @@ export const FollowItem = () => {
           className="rounded-full"
         />
         <div className="flex flex-col items-start">
-          <Link
-            href="/profile"
-            className="text-sm text-neutral-200 font-semibold hover:underline"
-          >
-            Dustin Willis
-          </Link>
+          <HoverCard>
+            <Link
+              href="/profile"
+              className="text-sm text-neutral-200 font-semibold hover:underline"
+            >
+              Dustin Willis
+            </Link>
+          </HoverCard>
           <span className="text-sm text-neutral-500">@carlos</span>
         </div>
       </div>

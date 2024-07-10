@@ -6,7 +6,7 @@ import { ShowNewPostBanner } from "./show-new-posts-banner";
 export const ForYouTab = () => {
   return (
     <TabsPrimitive.Content
-      value="you"
+      value="for-you"
       className="border border-neutral-700 bg-black"
     >
       <NewPost />

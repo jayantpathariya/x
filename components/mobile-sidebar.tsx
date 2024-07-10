@@ -54,7 +54,7 @@ export const MobileSidebar = ({ isOpen, setIsOpen }: Props) => {
         <div className="mt-5 flex flex-col gap-y-6">
           {mobileSidebarLinks.map((link) => (
             <Link
-              href={link.href}
+              href={link.href === "/profile" ? "/username" : link.href}
               key={link.href}
               className="flex items-center gap-x-3"
             >

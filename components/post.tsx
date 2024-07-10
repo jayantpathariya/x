@@ -7,27 +7,31 @@ import { Tooltip } from "./tooltip";
 
 export const Post = () => {
   return (
-    <Link
-      href="/post"
-      className="flex items-start gap-x-2 p-4 pb-2 hover:bg-neutral-900/80 transition-colors duration-200 ease-in-out border border-neutral-700"
-    >
-      <Image
-        src="/profile-picture.png"
-        width={40}
-        height={40}
-        alt="Profile picture"
-        className="size-10 rounded-full"
-      />
+    <article className="flex items-start gap-x-2 p-4 pb-2 hover:bg-neutral-900/80 transition-colors duration-200 ease-in-out border border-neutral-700">
+      <Link href={"/username"} className="size-10 shrink-0">
+        <Image
+          src="/profile-picture.png"
+          width={40}
+          height={40}
+          alt="Profile picture"
+          className=" rounded-full size-10"
+        />
+      </Link>
       <div>
         <div className="flex w-full justify-between  text-neutral-500">
           <div className="flex items-center gap-x-1 md:gap-x-2">
             <HoverCard>
-              <button className=" text-neutral-200 font-semibold text-sm md:text-base line-clamp-1 hover:underline">
+              <Link
+                href={"/username"}
+                className=" text-neutral-200 font-semibold text-sm md:text-base line-clamp-1 hover:underline"
+              >
                 Ethel Richards
-              </button>
+              </Link>
             </HoverCard>
             <HoverCard>
-              <p className="text-sm">@scottrosa</p>
+              <Link href={"/username"} className="text-sm">
+                @scottrosa
+              </Link>
             </HoverCard>
             <span>•</span>
             <span className="text-sm">21h</span>
@@ -57,6 +61,6 @@ export const Post = () => {
           <PostActions />
         </div>
       </div>
-    </Link>
+    </article>
   );
 };

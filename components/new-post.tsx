@@ -7,6 +7,7 @@ import {
   Smile,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Tooltip } from "./tooltip";
 
 export const NewPost = () => {
@@ -14,13 +15,15 @@ export const NewPost = () => {
 
   return (
     <div className="gap-x-3 p-4 w-full hidden md:flex">
-      <Image
-        src="/profile-picture.png"
-        alt="Profile picture"
-        width={40}
-        height={40}
-        className="size-10 rounded-full"
-      />
+      <Link href={"/username"}>
+        <Image
+          src="/profile-picture.png"
+          alt="Profile picture"
+          width={40}
+          height={40}
+          className="size-10 rounded-full"
+        />
+      </Link>
       <div className="w-full">
         <div
           className={cn(

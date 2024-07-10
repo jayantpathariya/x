@@ -21,7 +21,7 @@ export const Sidebar = () => {
           {links.map((link) => (
             <li key={link.href}>
               <Link
-                href={link.href}
+                href={link.href === "/profile" ? "/username" : link.href}
                 className={cn(
                   "flex items-center justify-center xl:justify-start gap-x-4 hover:bg-neutral-800 p-3 xl:p-3 rounded-full transition-colors duration-200 text-neutral-400 relative",
                   pathname.includes(link.href) && "text-neutral-100"

@@ -7,6 +7,7 @@ import {
   Smile,
 } from "lucide-react";
 import Image from "next/image";
+import { Tooltip } from "./tooltip";
 
 export const NewPost = () => {
   const isFocused = false;
@@ -42,18 +43,26 @@ export const NewPost = () => {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-1">
-            <button className="hover:bg-sky-500/20 p-2 rounded-full">
-              <ImageIcon className="text-sky-500 size-5" />
-            </button>
-            <button className="hover:bg-sky-500/20 p-2 rounded-full">
-              <ImagePlay className="text-sky-500 size-5" />
-            </button>
-            <button className="hover:bg-sky-500/20 p-2 rounded-full">
-              <Smile className="text-sky-500 size-5" />
-            </button>
-            <button className="hover:bg-sky-500/20 p-2 rounded-full">
-              <MapPin className="text-sky-500 size-5" />
-            </button>
+            <Tooltip content="Media">
+              <button className="hover:bg-sky-500/20 p-2 rounded-full">
+                <ImageIcon className="text-sky-500 size-5" />
+              </button>
+            </Tooltip>
+            <Tooltip content="GIF">
+              <button className="hover:bg-sky-500/20 p-2 rounded-full">
+                <ImagePlay className="text-sky-500 size-5" />
+              </button>
+            </Tooltip>
+            <Tooltip content="Emoji">
+              <button className="hover:bg-sky-500/20 p-2 rounded-full">
+                <Smile className="text-sky-500 size-5" />
+              </button>
+            </Tooltip>
+            <Tooltip content="Location">
+              <button className="hover:bg-sky-500/20 p-2 rounded-full">
+                <MapPin className="text-sky-500 size-5" />
+              </button>
+            </Tooltip>
           </div>
           <button
             disabled

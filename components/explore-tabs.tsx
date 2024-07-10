@@ -1,3 +1,5 @@
+"use client";
+
 import * as Tabs from "@radix-ui/react-tabs";
 import { ExploreForYou } from "./explore-for-you";
 import { ExploreNews } from "./explore-news";

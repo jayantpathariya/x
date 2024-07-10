@@ -31,7 +31,7 @@ export const MobileNav = () => {
   return (
     <nav
       className={cn(
-        "fixed bottom-0 bg-black w-full p-4 flex justify-between",
+        "fixed bottom-0 bg-black w-full p-4 flex justify-between md:hidden",
         isScrolled && "opacity-40"
       )}
     >

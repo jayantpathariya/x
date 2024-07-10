@@ -2,6 +2,7 @@ import { Ellipsis } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { PostActions } from "./post-actions";
+import { Tooltip } from "./tooltip";
 
 export const Post = () => {
   return (
@@ -29,9 +30,11 @@ export const Post = () => {
             <span>•</span>
             <span className="text-sm">21h</span>
           </div>
-          <button className="p-2 hover:bg-sky-500/20 rounded-full group  transition-colors duration-200 ease-in-out">
-            <Ellipsis className="size-5 text-neutral-500 group-hover:text-sky-500  transition-colors duration-200 ease-in-out" />
-          </button>
+          <Tooltip content="More">
+            <button className="p-2 hover:bg-sky-500/20 rounded-full group  transition-colors duration-200 ease-in-out">
+              <Ellipsis className="size-5 text-neutral-500 group-hover:text-sky-500  transition-colors duration-200 ease-in-out" />
+            </button>
+          </Tooltip>
         </div>
         <div>
           <p className="text-sm">

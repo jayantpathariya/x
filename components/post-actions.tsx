@@ -7,6 +7,7 @@ import {
   Share,
 } from "lucide-react";
 import { PostActionButton } from "./post-action-button";
+import { Tooltip } from "./tooltip";
 
 export const PostActions = () => {
   return (
@@ -32,12 +33,16 @@ export const PostActions = () => {
         <PostActionButton icon={BarChart2} count="1.6M" tooltipTitle="Views" />
       </div>
       <div className="flex items-center">
-        <button className="text-neutral-500 p-2 hover:bg-sky-500/30 rounded-full group transition-colors duration-200 ease-in-out hidden md:inline-block">
-          <Bookmark className="size-5 group-hover:text-sky-500 transition-colors duration-200 ease-in-out" />
-        </button>
-        <button className="text-neutral-500 p-2 hover:bg-sky-500/30 rounded-full group transition-colors duration-200 ease-in-out">
-          <Share className="size-4 md:size-5 group-hover:text-sky-500 transition-colors duration-200 ease-in-out" />
-        </button>
+        <Tooltip content="Bookmark">
+          <button className="text-neutral-500 p-2 hover:bg-sky-500/30 rounded-full group transition-colors duration-200 ease-in-out hidden md:inline-block">
+            <Bookmark className="size-5 group-hover:text-sky-500 transition-colors duration-200 ease-in-out" />
+          </button>
+        </Tooltip>
+        <Tooltip content="Share">
+          <button className="text-neutral-500 p-2 hover:bg-sky-500/30 rounded-full group transition-colors duration-200 ease-in-out">
+            <Share className="size-4 md:size-5 group-hover:text-sky-500 transition-colors duration-200 ease-in-out" />
+          </button>
+        </Tooltip>
       </div>
     </div>
   );

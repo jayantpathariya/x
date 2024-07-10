@@ -1,5 +1,6 @@
 import { Ellipsis } from "lucide-react";
 import Link from "next/link";
+import { Tooltip } from "./tooltip";
 
 export const TrendingItem = () => {
   return (
@@ -12,9 +13,11 @@ export const TrendingItem = () => {
         <p className="text-sm text-neutral-200 font-semibold">PlayStation 5</p>
         <span className="text-xs text-neutral-600">6,112 posts</span>
       </div>
-      <button className="hover:bg-sky-500/20 p-1 group transition-colors duration-200 ease-in-out rounded-full">
-        <Ellipsis className="size-5 text-neutral-500 group-hover:text-sky-500 transition-colors duration-200 ease-in-out" />
-      </button>
+      <Tooltip content="More">
+        <button className="hover:bg-sky-500/20 p-1 group transition-colors duration-200 ease-in-out rounded-full">
+          <Ellipsis className="size-5 text-neutral-500 group-hover:text-sky-500 transition-colors duration-200 ease-in-out" />
+        </button>
+      </Tooltip>
     </Link>
   );
 };

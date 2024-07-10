@@ -23,11 +23,13 @@ export const ExploreTabs = () => {
             <TabTrigger value="entertainment" title="Entertainment" />
           </div>
         </Tabs.List>
-        <ExploreForYou />
-        <ExploreTrending />
-        <ExploreSports />
-        <ExploreNews />
-        <ExploreEntertainment />
+        <div className="border border-neutral-700">
+          <ExploreForYou />
+          <ExploreTrending />
+          <ExploreSports />
+          <ExploreNews />
+          <ExploreEntertainment />
+        </div>
       </Tabs.Root>
     </>
   );

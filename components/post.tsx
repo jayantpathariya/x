@@ -22,12 +22,9 @@ export const Post = () => {
         <div className="flex w-full justify-between  text-neutral-500">
           <div className="flex items-center gap-x-1 md:gap-x-2">
             <HoverCard>
-              <Link
-                href="/profile"
-                className=" text-neutral-200 font-semibold text-sm md:text-base line-clamp-1 hover:underline"
-              >
+              <button className=" text-neutral-200 font-semibold text-sm md:text-base line-clamp-1 hover:underline">
                 Ethel Richards
-              </Link>
+              </button>
             </HoverCard>
             <HoverCard>
               <p className="text-sm">@scottrosa</p>

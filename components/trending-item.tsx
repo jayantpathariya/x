@@ -6,7 +6,7 @@ export const TrendingItem = () => {
   return (
     <Link
       href="/post"
-      className="flex items-center justify-between hover:bg-neutral-900/30 p-3 pb-0 last:pb-3 transition-colors duration-200 ease-in-out"
+      className="flex items-center justify-between hover:bg-neutral-900/30 p-3 pt-0 pb-0 last:pb-3 transition-colors duration-200 ease-in-out"
     >
       <div>
         <span className="text-xs text-neutral-600">Gaming • Trending</span>

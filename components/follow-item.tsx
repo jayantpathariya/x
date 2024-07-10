@@ -4,7 +4,7 @@ import { HoverCard } from "./hover-card";
 
 export const FollowItem = () => {
   return (
-    <button className="flex items-center justify-between p-3 hover:bg-neutral-900/30 w-full">
+    <div className="flex items-center justify-between p-3 hover:bg-neutral-900/30 w-full">
       <div className="flex items-center gap-x-2">
         <Image
           src="/profile-picture.png"
@@ -28,6 +28,6 @@ export const FollowItem = () => {
       <button className="bg-neutral-100 text-neutral-900 font-bold py-1 px-2 rounded-full text-sm hover:bg-neutral-100/80 transition-colors duration-200 ease-in-out">
         Follow
       </button>
-    </button>
+    </div>
   );
 };

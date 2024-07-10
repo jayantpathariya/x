@@ -14,7 +14,7 @@ export const SidebarBox = ({ children, className, title }: Props) => {
         className
       )}
     >
-      <h2 className="font-bold p-3">{title}</h2>
+      <h2 className="font-bold p-3 text-lg">{title}</h2>
       {children}
     </div>
   );

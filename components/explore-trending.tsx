@@ -3,7 +3,7 @@ import { TrendingItem } from "./trending-item";
 
 export const ExploreTrending = () => {
   return (
-    <Tabs.Content value="for-you">
+    <Tabs.Content value="trending">
       {Array.from({ length: 15 }).map((_, i) => (
         <TrendingItem key={i} />
       ))}

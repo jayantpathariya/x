@@ -6,18 +6,16 @@ import { TabTrigger } from "./tab-trigger";
 
 export const HomeTabs = () => {
   return (
-    <>
-      <TabsPrimitive.Root defaultValue="for-you">
-        <TabsPrimitive.List className="bg-black w-full border border-neutral-700 md:sticky top-0 z-10">
-          <MobileHeader />
-          <div className="grid grid-cols-2">
-            <TabTrigger value="for-you" title="For you" />
-            <TabTrigger value="following" title="Following" />
-          </div>
-        </TabsPrimitive.List>
-        <ForYouTab />
-        <FollowingTab />
-      </TabsPrimitive.Root>
-    </>
+    <TabsPrimitive.Root defaultValue="for-you">
+      <TabsPrimitive.List className="bg-black w-full border border-neutral-700 md:sticky top-0 z-10">
+        <MobileHeader />
+        <div className="grid grid-cols-2">
+          <TabTrigger value="for-you" title="For you" />
+          <TabTrigger value="following" title="Following" />
+        </div>
+      </TabsPrimitive.List>
+      <ForYouTab />
+      <FollowingTab />
+    </TabsPrimitive.Root>
   );
 };

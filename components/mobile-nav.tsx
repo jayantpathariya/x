@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from "@/libs/constants";
+import { mobileLinks } from "@/libs/constants";
 import { cn } from "@/libs/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -35,9 +35,7 @@ export const MobileNav = () => {
         isScrolled && "opacity-40"
       )}
     >
-      {links.map((link) => {
-        if (link.href === "/more" || link.href === "/profile") return;
-
+      {mobileLinks.map((link) => {
         return (
           <Link key={link.href} href={link.href}>
             <link.icon

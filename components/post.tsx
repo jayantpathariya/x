@@ -1,13 +1,25 @@
+"use client";
+
 import { Ellipsis } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { HoverCard } from "./hover-card";
 import { PostActions } from "./post-actions";
 import { Tooltip } from "./tooltip";
 
 export const Post = () => {
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push(`/username/status/postId`);
+  };
+
   return (
-    <article className="flex items-start gap-x-2 p-4 pb-2 hover:bg-neutral-900/80 transition-colors duration-200 ease-in-out border border-neutral-700">
+    <article
+      onClick={handleNavigate}
+      className="flex items-start gap-x-2 p-4 pb-2 hover:bg-neutral-900/80 transition-colors duration-200 ease-in-out border border-neutral-700 cursor-pointer"
+    >
       <Link href={"/username"} className="size-10 shrink-0">
         <Image
           src="/profile-picture.png"

@@ -13,15 +13,15 @@ export const NotificationsTabs = () => {
         <TabTrigger value="verified" title="Verified" />
         <TabTrigger value="mentions" title="Mentions" />
       </Tabs.List>
-      <Tabs.Content value="all" className="flex flex-col gap-y-2">
+      <Tabs.Content value="all" className="flex flex-col">
         <NotificationPostItem />
         <NotificationFollowItem />
         <NotificationKLikeItem />
       </Tabs.Content>
-      <Tabs.Content value="verified" className="flex flex-col gap-y-2">
+      <Tabs.Content value="verified" className="flex flex-col">
         <NotificationPostItem />
       </Tabs.Content>
-      <Tabs.Content value="mentions" className="flex flex-col gap-y-2">
+      <Tabs.Content value="mentions" className="flex flex-col">
         <NotificationMentionItem />
         <NotificationMentionItem />
       </Tabs.Content>

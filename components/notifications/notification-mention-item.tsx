@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const NotificationMentionItem = () => {
   return (
-    <div className="p-4 border-b border-neutral-500">
+    <div className="p-4 border-b border-neutral-500 hover:bg-neutral-900/80 transition-colors duration-200 ease-in-out cursor-pointer">
       <div className="flex gap-x-2">
         <div className="size-9 shrink-0">
           <Image

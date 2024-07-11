@@ -4,7 +4,7 @@ import Image from "next/image";
 export const NotificationPostItem = () => {
   return (
     <div>
-      <div className="flex gap-x-3 border-b border-neutral-700 p-4">
+      <div className="flex gap-x-3 border-b border-neutral-700 p-4 hover:bg-neutral-900/80 transition-colors duration-200 ease-in-out cursor-pointer">
         <Bell className="size-8 text-sky-500 fill-sky-500" />
         <div className="flex flex-col gap-y-2">
           <div className="flex gap-x-2">

@@ -7,6 +7,7 @@ type Props = {
   count: string;
   tooltipTitle: string;
   color?: string;
+  size?: "sm" | "default";
 };
 
 export const PostActionButton = ({
@@ -14,10 +15,11 @@ export const PostActionButton = ({
   count,
   tooltipTitle,
   color,
+  size = "default",
 }: Props) => {
   let Icon = icon;
   return (
-    <button className="flex items-center text-neutral-500 group">
+    <button className={"flex items-center text-neutral-500 group"}>
       <Tooltip content={tooltipTitle}>
         <Icon
           className={cn(
@@ -25,7 +27,8 @@ export const PostActionButton = ({
             color === "green" &&
               "group-hover:bg-green-500/20 group-hover:text-green-500",
             color === "red" &&
-              "group-hover:bg-rose-500/20 group-hover:text-rose-500"
+              "group-hover:bg-rose-500/20 group-hover:text-rose-500",
+            size === "sm" && "p-2.5"
           )}
         />
       </Tooltip>

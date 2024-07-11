@@ -7,12 +7,14 @@ import {
   Share,
 } from "lucide-react";
 import Image from "next/image";
+import { PostActionButton } from "../post-action-button";
 import { Tooltip } from "../tooltip";
+import { PostThread } from "./post-thread";
 
 export const PostDetail = () => {
   return (
     <div>
-      <article className="bg-black p-4 pt-0">
+      <article className="bg-black p-4 pt-0 pb-2 border-b border-neutral-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-2">
             <Image
@@ -28,7 +30,7 @@ export const PostDetail = () => {
             </div>
           </div>
           <div className="flex items-center gap-x-1">
-            <button className="bg-neutral-100 text-neutral-900 px-4 py-1.5 rounded-full text-sm font-semibold">
+            <button className="bg-neutral-100 text-neutral-900 px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-neutral-100/80 transition-colors duration-200 ease-in-out md:hidden">
               Follow
             </button>
             <Tooltip content="More">
@@ -60,38 +62,38 @@ export const PostDetail = () => {
           </div>
         </div>
         <div className="flex items-center gap-x-2 justify-between mt-2  text-neutral-500 text-sm">
-          <Tooltip content="Comment">
-            <button className="flex items-center gap-x-1">
-              <MessageCircle className="size-5" />
-              <span>235</span>
-            </button>
-          </Tooltip>
-          <Tooltip content="Repost">
-            <button className="flex items-center gap-x-1">
-              <Repeat2 />
-              <span>604</span>
-            </button>
-          </Tooltip>
-          <Tooltip content="Like">
-            <button className="flex items-center gap-x-1">
-              <Heart className="size-5" />
-              <span>3.5K</span>
-            </button>
-          </Tooltip>
-          <Tooltip content="Bookmark">
-            <button className="flex items-center gap-x-1">
-              <Bookmark className="size-5" />
-              1.4k
-            </button>
-          </Tooltip>
+          <PostActionButton
+            icon={MessageCircle}
+            count="235"
+            tooltipTitle="Reply"
+          />
+          <PostActionButton icon={Repeat2} count="604" tooltipTitle="Repost" />
+          <PostActionButton
+            icon={Heart}
+            count="3.5K"
+            tooltipTitle="Like"
+            color="red"
+          />
+          <PostActionButton
+            icon={Bookmark}
+            count="1.4k"
+            tooltipTitle="Bookmark"
+            color="green"
+          />
           <Tooltip content="Share">
-            <button className="flex items-center gap-x-1">
-              <Share className="size-5" />
+            <button className="group p-2 hover:bg-sky-500/20 rounded-full transition-colors duration-200 ease-in-out">
+              <Share className="size-5 group-hover:text-sky-500 transition-colors duration-200 ease-in-out" />
             </button>
           </Tooltip>
         </div>
       </article>
-      {/* <PostThread /> */}
+      <PostThread isImage isThread />
+      <PostThread isThread />
+      <PostThread />
+      <PostThread isThread />
+      <PostThread />
+      <PostThread isImage />
+      <PostThread />
     </div>
   );
 };

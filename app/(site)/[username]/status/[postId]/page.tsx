@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const PostDetailPage = () => {
   return (
-    <div>
+    <div className="mb-16">
       <PostDetailHeader />
       <PostDetail />
     </div>

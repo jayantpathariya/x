@@ -1,3 +1,4 @@
+import { cn } from "@/libs/utils";
 import { TooltipProvider } from "@/providers/tooltip-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -45,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={chirp.className}>
+      <body className={cn("bg-black", chirp.className)}>
         <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>

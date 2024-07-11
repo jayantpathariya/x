@@ -14,7 +14,7 @@ export const MobileSidebar = ({ isOpen, setIsOpen }: Props) => {
     <>
       <div
         className={cn(
-          "bg-black fixed top-0 left-0 z-10 h-screen w-[70%] p-3 border-r border-neutral-400 -translate-x-[100%] transition-transform duration-300 ease-in-out",
+          "bg-black fixed top-0 left-0 z-20 h-screen w-[250px] p-3 border-r border-neutral-400 -translate-x-[100%] transition-transform duration-300 ease-in-out md:hidden",
           isOpen && "translate-x-0"
         )}
       >
@@ -71,7 +71,7 @@ export const MobileSidebar = ({ isOpen, setIsOpen }: Props) => {
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="absolute inset-0 z-[5] bg-white/30"
+          className="fixed inset-0 z-[15] bg-white/30 md:hidden overflow-hidden"
         ></div>
       )}
     </>

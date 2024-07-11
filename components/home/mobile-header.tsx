@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Logo } from "./logo";
-import { MobileSidebar } from "./mobile-sidebar";
+import { Logo } from "../logo";
+import { MobileSidebar } from "../mobile-sidebar";
 
 export const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState(false);

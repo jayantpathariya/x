@@ -1,4 +1,4 @@
-import { ExploreTabs } from "@/components/explore-tabs";
+import { ExploreTabs } from "@/components/explore/explore-tabs";
 
 const ExplorePage = () => {
   return (

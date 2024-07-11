@@ -1,9 +1,9 @@
 "use client";
 
 import * as Tabs from "@radix-ui/react-tabs";
-import { Posts } from "./posts";
+import { Posts } from "../posts";
+import { TabTrigger } from "../tab-trigger";
 import { ProfileMediaGallery } from "./profile-media-gallery";
-import { TabTrigger } from "./tab-trigger";
 
 export const ProfileTabs = () => {
   return (

@@ -1,4 +1,4 @@
-import { HomeTabs } from "@/components/home-tabs";
+import { HomeTabs } from "@/components/home/home-tabs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

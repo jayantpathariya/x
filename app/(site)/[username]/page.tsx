@@ -1,5 +1,5 @@
-import { Profile } from "@/components/profile";
-import { ProfileHeader } from "@/components/profile-header";
+import { Profile } from "@/components/profile/profile";
+import { ProfileHeader } from "@/components/profile/profile-header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,8 +1,8 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { TabTrigger } from "../tab-trigger";
 import { FollowingTab } from "./following-tab";
 import { ForYouTab } from "./for-you-tab";
 import { MobileHeader } from "./mobile-header";
-import { TabTrigger } from "./tab-trigger";
 
 export const HomeTabs = () => {
   return (

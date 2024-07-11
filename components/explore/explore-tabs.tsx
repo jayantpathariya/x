@@ -1,13 +1,13 @@
 "use client";
 
 import * as Tabs from "@radix-ui/react-tabs";
+import { TabTrigger } from "../tab-trigger";
 import { ExploreEntertainment } from "./explore-entertainment";
 import { ExploreForYou } from "./explore-for-you";
 import { ExploreNews } from "./explore-news";
 import { ExploreSports } from "./explore-sports";
 import { ExploreTrending } from "./explore-trending";
 import { MobileExploreHeader } from "./mobile-explore-header";
-import { TabTrigger } from "./tab-trigger";
 
 export const ExploreTabs = () => {
   return (

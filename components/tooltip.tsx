@@ -13,7 +13,7 @@ export const Tooltip = ({ children, content }: Props) => {
         <TooltipPrimitive.Content
           side="bottom"
           align="center"
-          className="bg-neutral-500 text-xs p-1 rounded-sm text-neutral-100"
+          className="bg-neutral-500 text-xs p-1 rounded-sm text-neutral-100 z-30"
         >
           {content}
           <TooltipPrimitive.Arrow />

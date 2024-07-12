@@ -7,6 +7,7 @@ import { Pen } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
+import { NewPostDialog } from "./new-post-dialog";
 
 export const Sidebar = () => {
   const pathname = usePathname();
@@ -45,13 +46,12 @@ export const Sidebar = () => {
               </Link>
             </li>
           ))}
-          <Link
-            href="/compose/post"
-            className="bg-sky-500 w-fit xl:w-full p-3 rounded-full text-center font-bold hover:bg-sky-500/90 transition-colors duration-200"
-          >
-            <span className="hidden xl:inline-block">Post</span>
-            <Pen className="size-5 xl:hidden" />
-          </Link>
+          <NewPostDialog>
+            <button className="bg-sky-500 w-fit xl:w-full p-3 rounded-full text-center font-bold hover:bg-sky-500/90 transition-colors duration-200">
+              <span className="hidden xl:inline-block">Post</span>
+              <Pen className="size-5 xl:hidden" />
+            </button>
+          </NewPostDialog>
         </ul>
       </nav>
     </aside>

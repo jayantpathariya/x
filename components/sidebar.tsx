@@ -3,7 +3,8 @@
 import { cn } from "@/libs/utils";
 
 import { links } from "@/libs/constants";
-import { Pen } from "lucide-react";
+import { Ellipsis, Pen } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
@@ -13,8 +14,7 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    // <aside className="bg-black p-2 fixed top-0 hidden md:block">
-    <aside className="p-2 w-[68px] xl:w-[275px] shrink-0 sticky top-0 h-screen hidden md:block">
+    <aside className="p-2 w-[68px] xl:w-[275px] shrink-0 sticky top-0 h-screen hidden md:flex flex-col">
       <div className="flex flex-col items-end xl:items-start">
         <Logo />
       </div>
@@ -54,6 +54,22 @@ export const Sidebar = () => {
           </NewPostDialog>
         </ul>
       </nav>
+      <button className="mt-auto hover:bg-neutral-900 flex items-center justify-between p-3 rounded-full transition-colors duration-200 ease-in-out">
+        <div className="flex items-center gap-x-2 shrink-0">
+          <Image
+            src="/profile-picture.png"
+            height={40}
+            width={40}
+            alt="Profile Picture"
+            className="rounded-full size-10"
+          />
+          <div className=" flex-col items-start hidden xl:flex">
+            <span className="font-semibold">Leroy Wagner</span>
+            <span className="text-neutral-500 text-sm">@leroywagner</span>
+          </div>
+        </div>
+        <Ellipsis className="text-neutral-500 size-5 hidden xl:flex" />
+      </button>
     </aside>
   );
 };

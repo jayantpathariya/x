@@ -10,7 +10,6 @@ export const TrendingSidebar = () => {
   const pathname = usePathname();
 
   return (
-    // <div className="p-2 min-w-[350px] hidden xl:block sticky z-10 top-0 bg-black h-fit">
     <aside className="w-[290px] xl:w-[350px] shrink-0 sticky top-0 h-fit hidden lg:block lg:mx-6 p-2">
       {!pathname.includes("/explore") && (
         <>

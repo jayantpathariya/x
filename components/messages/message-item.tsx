@@ -1,12 +1,20 @@
+import { cn } from "@/libs/utils";
 import { Ellipsis } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const MessageItem = () => {
+type Props = {
+  isActive?: boolean;
+};
+
+export const MessageItem = ({ isActive = false }: Props) => {
   return (
     <Link
       href="/messages/1429076224756916228"
-      className="flex items-center gap-x-2 p-3 bg-black hover:bg-neutral-900 transition-colors duration-200 ease-in-out"
+      className={cn(
+        "flex items-center gap-x-2 p-3 bg-black hover:bg-neutral-900 transition-colors duration-200 ease-in-out",
+        isActive && "bg-neutral-900 border-r-2 border-sky-500"
+      )}
     >
       <Image
         src="/profile-picture.png"
@@ -30,7 +38,7 @@ export const MessageItem = () => {
         </p>
       </div>
       <button>
-        <Ellipsis className="size-5 text-neutral-500" />
+        <Ellipsis className="size-5 text-neutral-500 md:hidden" />
       </button>
     </Link>
   );

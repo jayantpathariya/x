@@ -2,13 +2,15 @@
 
 import { ArrowLeft, Search } from "lucide-react";
 import { useState } from "react";
+import { MessageHeader } from "./message-header";
 import { MessageItem } from "./message-item";
 
-export const MessagesContent = () => {
+export const Messages = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <div className="bg-black">
+    <div className="bg-black border-l border-neutral-800">
+      <MessageHeader />
       <div className="flex items-center gap-x-2 mb-2 p-3">
         {isSearchOpen && (
           <button onClick={() => setIsSearchOpen(false)}>
@@ -25,7 +27,7 @@ export const MessagesContent = () => {
           />
         </div>
       </div>
-      <MessageItem />
+      <MessageItem isActive />
       <MessageItem />
       <MessageItem />
     </div>

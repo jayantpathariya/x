@@ -1,4 +1,4 @@
-import { Messages } from "@/components/messages/messages";
+import { MessagesContent } from "@/components/messages/messages-content";
 import { Sidebar } from "@/components/sidebar";
 
 const MessageLayout = ({ children }: { children: React.ReactNode }) => {
@@ -7,7 +7,9 @@ const MessageLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex justify-center max-w-7xl mx-auto">
         <div className="flex w-full justify-center">
           <Sidebar />
-          <Messages />
+          <div className="hidden md:block">
+            <MessagesContent />
+          </div>
           <main className="w-full md:max-w-[560px] border-x border-neutral-800">
             {children}
           </main>

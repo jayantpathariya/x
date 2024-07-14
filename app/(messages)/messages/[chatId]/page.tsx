@@ -1,5 +1,11 @@
+import { Chat } from "@/components/chat/chat";
+
 const ChatPage = () => {
-  return <div className="w-full">ChatPage</div>;
+  return (
+    <div>
+      <Chat />
+    </div>
+  );
 };
 
 export default ChatPage;

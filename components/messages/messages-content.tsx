@@ -5,7 +5,7 @@ import { useState } from "react";
 import { MessageHeader } from "./message-header";
 import { MessageItem } from "./message-item";
 
-export const Messages = () => {
+export const MessagesContent = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
